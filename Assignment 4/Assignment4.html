@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>HTML L1: Assignment 4</title>
+    <script type="text/javascript">
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+        {
+      
+          title:{
+          text: "Runs per Over",
+          },
+           data: [
+          {
+            type: "line",
+      
+             dataPoints: [
+            { x: 5, y: 40 },
+            { x: 10, y: 75 },
+            { x: 15, y: 140 }
+            ]
+          }
+          ]
+        });
+      
+        chart.render();
+      }
+    </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </head>
+  <body>
+    <table border="1px">
+      <tr>
+        <th>OVER</th>
+        <th>Runs</th>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>75</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>140</td>
+      </tr>
+    </table>
+    <br>
+    Below is the line chart for above data:<br><br>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+    <br><br>
+  </body>
+</html>

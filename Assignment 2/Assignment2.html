@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xena Events</title>
+    <style>
+      *{
+      font-family: calibri;
+      background-color: #eee;
+      color: #333;
+      }
+      #container {
+      text-align: center;
+      display: flex;
+      }
+      #header {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      }
+      #img {
+      width: 175px;
+      height: 150px;
+      }
+      #form {
+      display: inline-block;
+      }
+      #spare {
+      height: 20px;
+      }
+    </style>
+    <script>
+      var citynames = ["Rajkot", "Vizag", "Bangalore"];
+          function addcity() {
+            if (citynames.length > 3) citynames.pop();
+            var name = document.forms["register"]["city"].value;
+            var flag = 0;
+            citynames.map(cityname => {
+              if (name === cityname) flag++;
+            });
+            if (flag == 0) {
+              citynames.push(name);
+            }
+          }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="header">
+        <img id="img" src="assignmentlogo.PNG">
+        XENA Events presents Hot Ballon Riding
+      </h1>
+      <br>
+    </div>
+    <hr>
+    <p>Event starts <b>28<sup>th</sup> February 2017</date></b> onwards for <b>5 days</b>.</p>
+    <br>
+    For bookings, please fill in the below form:
+    <br><br>
+    <div>
+      <form id="form" name="register" onsubmit="validateForm()">
+        <br>
+        <fieldset>
+          <table>
+            <legend>Booking Form</legend>
+            <tr>
+              <td><label for="name">Name:</label></td>
+              <td><input type="text" id="name" placeholder="Name" required></td>
+            </tr>
+            <tr>
+              <td><label for="age">Age:</label></td>
+              <td><input type="number" min="18" placeholder="Age" name="age" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email ID:</label</td>
+              <td><input type="email" name="email" placeholder="E-mail" required /></td>
+            </tr>
+            <tr>
+              <td>City:</td>
+              <td>
+                <input type="text" id="city" placeholder="City" list="cities" onchange="addcity()" required>
+                <datalist id="cities">
+                  <option value="Bangalore">
+                  <option value="Rajkot">
+                  <option value="Vizag">
+                </datalist>
+              </td>
+            </tr>
+            <tr colspan="2" id="list"></tr>
+            <tr id="spare"></tr>
+            <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

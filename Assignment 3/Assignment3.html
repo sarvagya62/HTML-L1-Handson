@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML L1: Assignment 3</title>
+    <style>
+      .head {
+        background: #fff;
+      }
+      .main {
+        background: #f3f0d7;
+      }
+      * {
+        font-family: calibri;
+        color: #333;
+      }
+      .container {
+        font-size: 30px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-rows: 40% 100%;
+      }
+      .head {
+        display: flex;
+      }
+      #img {
+        width: 10%;
+        height: 80%;
+      }
+      #title {
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX///8AAABTU1Pi4uKUlJTr6+uHh4f7+/s8PDwGBgbc3Nz29vbm5ubJycm0tLT19fVubm6goKC7u7tMTExGRkZYWFjv7+83NzdsbGwaGhrU1NQxMTGAgIBkZGQjIyOcnJwYGBioqKgQEBB4eHgqKiqRkZG5ublISEjMzMxeXl6urq7L/oHIAAAI0UlEQVR4nO2de3+yIBTHdWU3u9e0Wpen29b2/l/gY2scEDQBEY99+P21WSrfRD3Aj4PnpRVuZqt43fcx6bRfdH6GnhGNpnXT5Ctul4ecL+umKNA5KMUXvNcNIKFDmQtYd+HltNC+jNe6iy6r00APsFN3wRWkhdiYK/irljrgZ/oI/d7iDZO+LunyXUJVwCCFt90EXfUfqVJNhuPUg36qeoA3Zue28u9jSYMFU8qR2r7MeyI2FBtVohkt5z+1PWkk84b1Aj40oog/evvFuAHZ2tZT2Y0G25ir6EP0tb2R3ymkDxnYNu+k1YaX7ObamUVGC60maNZt5fe5wWuC1NEoo4nxR3/WeZKZ1FGjmsITCn6VLxHQ9+f3Tw61V2da4+Rr0oqv2ZssQP/j/hH5p1NF4RWLe5PeJSaVlDRLPgW6XyWfROTvXSWFlxKpRv5Repc1qdgkVMtpKHpMFVlVUngpwbtNvi1Mnk4LsmGSCfgbCpJH0LiCoktqQArULv7un8geb7DlmAF4ipjDv5svuLRaJgi98QcPuPt7em7uQfq2zqaHGUKvG6TFPJmjYGKuuBoyRIhYjjBDjhCZHGGGHCEyOcIMOUJkcoQZcoTI5Agz1FRC+V6MphK+H9qCDsdbJDbPm0qYp3jLd/i/GmGiXnpk6gUJff8fO/DwkoS+P6UjhS9K6F/AsfGqhNR387qEBPGFCR8d9Y0l3A5bvAajQ9of+xiLaSphTlwaHk8M4uy+qTxhN7p9fo6GdowcEpE360K8D4qWJbyd/1xn/d3YwpCNTNuCGQE9e2UJRylXw15+YFZXUq0nxloUlCQUjO+x/PC6nuTah9Qg1i5FGPV4wESrao0aki1g8JPEZQgnwkDqQ9cqb0dJQhgM94clCBd+jtafuuUvlmwvBvhRf/QJ23mAiZYKtjM1yRKOyfc62oTDJ4B+6ckfuZIlhOIttAnZ9+r5MOusfU5lJn/kS5ZwQrzhe13CCQ2Ozg/vwpFH3Ffh8JPuTSRP05MuIY0b4FThlmd805z98UTShGBe1yWESrpgNg6EqVNb094Ue4TAkg5iRvzteDIcyNkjJDdyn79IB5/T3mggZ4+QPGhiIYCJzjzjzmAgZ4+QWBp7GSHaRoh2rsYajzgIMzyqa1OGTSyEGbPhemYCOTyE3lBoOxoJ5BARJrej0Hw0EMihIkwCfH5e/36udhZRyAi9rjD7dlEykMNGmARy3zzjttSsInyEGYFcf6Z2qpQwEqamRj601m9X4STMCOS+NeZj/wopYVYg19EL5NASZgRyJ61ADjFhRufcTqNjFTWhGMh9qfcA4CYUA7kvtZN6+AmZntqHlLMj4CfkAznVN2MDCJNC7hjCWHXnJhAmgdxe+yI2hJAdE1CcU9wYQg/iuJNaU6M5hF24iGoNxuYQ0nqqFrw1iBBejGqdNw0inL884ZGcWK3F3yBCGLxSeyE2h5C1g6ioMYQRpGBTPEBTCG80bFPMBNMMwoDtQ1UcW2wCYZgallJtIDaAcJzuIFbtx0BPyHdjKI/UICeMVn5a6v37qAm7gk1Dw4mCmXDONOwf0hm9wEs4ELLA6aUqwkoYCZa3d82hGaSER360+0N7tBsl4Ujwg5cYIkVI2BL8iucyfkV0hKFgVSjpOcVGOObfEOuydhNchFVYhjARBoLta2rA9oWHUAzRvoxY99AQiiGaIfslEsKB6LwwNRfKHiHZLYOwUhu0PULSUt8LtpiZEKKZnFlijxDmjnKDYyPhBizjYhNljxBqYuoV12KXWfjV2fAEaHuE1I1HL+LEdIiWIXuENLdBTALp4z+Or3SI9uy8lROyM0hnd8Y5t1SKSq4qBVkkTDnx1sLzxZ9Ws8CARUIvayI3qLJpsjYJBzwVo+pSmtsk9H7y+KpcWMAqYc5s7pWuwVlKdgmzrmLVaSMsE3otvhut8tQftgnTq0LuD9Wnb7FPmDxTD9Pl5bLcXW82VhSog/Cu0NpyCXUR2pMjBDlCtHKEIEeIVo4Q5AjRyhGCHCFaOUKQI0QrRwhyhGjlCEGOEK0cIcgRopUjBDlCtHKEIEpIUq2qJ8OpRRt1QuKEudS73rasIFFBkSGQEoK3qdo1DUxJOtkEJdTMT1GXYFC9yBNICcFP8W6lhCVFDYNFrk5KSFcAMJ9A3bxghsN30TcpoReTPxvwNKVOs0JbC0NInU1m/coVqAtXwy+cnMIQMgtVVLGYgUnRJGHF0/gZQmrZ9v0Kl08pry4zE7z4mcESBnTHSm2FJTWgVdRfFX+dJUzliD0d7awupqpWap6YRPyVIuRW/VkdRgNhXbo6tRl3UkuDSWViSBNGvMset6RupTThU0czOsll6eMIm4QomYaQJ/SGOUuModNWDlAk9EJhUitKSU/DEQk974b/eTOVb6ZnESYN6KezRGrXSqX1k03oeZvt8tk5atT3UW0meB5hosntmLX0PCR/2IofVq3ZuKUcaT0hzBHMPm9Gf44GITQjK50SY06OUJQjxCZHKMoRYpMjFOUIsckRinKE2OQIRWUSRgGT/SKoXexcXSOEw/tY0Oqv62SEoAfk48csYfQwqlx+f7lRDUAZokOgJQihO4h0P16Tv7tYuluhM46MxfSlCaEXA4ZRyYalh6jPnPSndslNs5YmPJJjQOorsqGHiZB4ZgKSU01+QSm40WCAmVTMuy0iEM9Vj0jmH3CHyae1j+AgpGNvzh5USIVcj5akuFAeBfsFvA3A6NFm/91lnM+6luT1HMImhWwy8KucYFOr3TlA9+no2qlbdNiGWmgUupKhZmO2M/yJOmiUVpegQQtqU0qikL6dlSxCTM4k3NaikGZvXBZ/mxUzvojZIMYOZyvmNWRjzyVWJ2PIZiBTdpSmBsLfx0NsxulusEm/l5WTT4dc9sfL1xsmLXpc+luNJ+LQb5Ku6oCIImwJab62W6fiQ+OQdvrUSEgVjFNlph7Mig9fu97KpfAPkDSVctUrn8A4aMfF56lLU0Mx5XDcWexxPXb663g6G/HNpf+ojoFXgxwdZwAAAABJRU5ErkJggg=="
+          alt="logo"
+          id="img"
+        />
+        <h1 id="title">Awesome Online Videos</h1>
+      </div>
+      <div class="main">
+        You can watch your video here <br />
+        <br />
+        <video width="320" height="240" id="video1">
+          <source src="./freestock_2529101.mp4" type="video/mp4" />
+        </video>
+        <br />
+        <button type="button" onclick="play()">Play</button>
+        <button type="button" onclick="pause()">Pause</button>
+        <script>
+          var myVideo = document.getElementById("video1");
+          function play() {
+            if (myVideo.paused) myVideo.play();
+          }
+          function pause() {
+            if (!myVideo.paused) myVideo.pause();
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
